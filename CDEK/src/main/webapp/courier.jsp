@@ -21,13 +21,13 @@
 				<td align = "right" colspan = "2"><input type="submit" value="Не успеваю"></td>
 			</tr>
 			
+			<%
+				String msg = (String) request.getAttribute("message");
+				if(msg != null)
+					out.println(msg);
+			%>
+			
 		</table>
-		<%
-			String msg = (String) request.getAttribute("message");
-			if(msg != null)
-				out.println(msg);
-		%>
-		<%-- <c:out value="${message}"/> --%>
 	</form>
 </body>
 </html>
