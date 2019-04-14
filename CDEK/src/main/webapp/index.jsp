@@ -11,12 +11,12 @@
 		<table>
 			<tr>
 				<td>
-					<input type="radio" name = "chooseMenu" value="call">Call-центр<br>
-					<input type="radio" name = "chooseMenu" value="courier">Курьер<br>
+					<input type="radio" name = "chooseMenu" value="call">Call-center<br>
+					<input type="radio" name = "chooseMenu" value="courier">Courier<br>
 				</td>
 			</tr>
 			<tr>
-				<td align = "right"><input type="submit" value="Войти"></td>
+				<td align = "right"><input type="submit" value="Enter"></td>
 			</tr>
 			
 		</table>

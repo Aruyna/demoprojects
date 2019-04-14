@@ -12,14 +12,14 @@
 		<table>
 			<tr>
 				<td><input type="text" name = "findNumber"></td>
-				<td align = "right"><input type="submit" value="Найти/Показать все"></td>
+				<td align = "right"><input type="submit" value="Find/show all"></td>
 			</tr>
 		</table>
 		<br>	
 		<table>
 			<tr>
-				<th>Заказ</th>
-				<th>Дата и время</th>
+				<th>Order</th>
+				<th>Date and time</th>
 			</tr>
 			<%
  				Map<String, String> list = (Map<String, String>) request.getAttribute("order");

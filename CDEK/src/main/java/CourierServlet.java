@@ -30,7 +30,7 @@ public class CourierServlet extends HttpServlet implements DBInterface{
 		if((orderNumber != null) && (courierId != null)) 
 		{
 			if(orderNumber == "" || courierId == "") {
-				msg = "Ошибка! Не все поля заполнены.";
+				msg = "Error. Field is not filled";
 			}else {
 				sql = "select * from public.courier where courier_number = '" + courierId + "'";
 				if(checkDataInDB(sql)) 
@@ -46,11 +46,11 @@ public class CourierServlet extends HttpServlet implements DBInterface{
 							{
 								sql = "INSERT INTO public.ChangeDelivery(order_number, datetime)VALUES ('" + orderNumber +"', date_trunc('second', now()))";		
 								insertDataInDB(sql);			
-								msg = "Задание добавлено, заказ №" + orderNumber;
-							}else msg = "Ошибка. Заказ №" + orderNumber + " уже добавлен";
-						}else msg = "Ошибка. Заказ №" + orderNumber + " у другого курьера";
-					}else msg = "Ошибка. Заказа с №" + orderNumber + " нет в БД";
-				}else msg = "Ошибка. Курьера с указанным id нет в БД";	
+								msg = "Order " + orderNumber + " successfully added";
+							}else msg = "Error. Order " + orderNumber + " has been added before";
+						}else msg = "Error. Order " + orderNumber + " from another courier";
+					}else msg = "Error. There is no order with " + orderNumber + " in the DB";
+				}else msg = "Error. There is no such ID in the DB";	
 			}
 		}
 		

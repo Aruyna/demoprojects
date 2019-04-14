@@ -10,24 +10,22 @@
 	<form method = "GET" action="CourierServlet">
 		<table>
 			<tr>
-				<td>Id курьера</td>
+				<td>Courier id</td>
 				<td align = "right"> <input type="text" name = "courierId"></td>
 			</tr>
 			<tr>
-				<td>Заказ №</td>
+				<td>Order</td>
 				<td align = "right"><input type="text" name = "orderNumber"></td>
 			</tr>
 			<tr>
-				<td align = "right" colspan = "2"><input type="submit" value="Не успеваю"></td>
-			</tr>
-			
-			<%
-				String msg = (String) request.getAttribute("message");
-				if(msg != null)
-					out.println(msg);
-			%>
-			
+				<td align = "right" colspan = "2"><input type="submit" value="I don't have time"></td>
+			</tr>	
 		</table>
+		<%
+			String msg = (String) request.getAttribute("message");
+			if(msg != null)
+				out.println(msg);
+		%>
 	</form>
 </body>
 </html>
